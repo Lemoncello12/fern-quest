@@ -1,3 +1,3 @@
-# fern-quest
+#Fern Quest
 
-Coming soon if I feel like it maybe
+A top-down RPG game.
