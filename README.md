@@ -1,2 +1,3 @@
 # fern-quest
-Fern Quest! Coming soon to a...a...a fern store? Is...is that a thing? 
+
+Coming soon if I feel like it maybe
