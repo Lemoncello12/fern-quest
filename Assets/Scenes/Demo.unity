@@ -2746,7 +2746,7 @@ GameObject:
   - component: {fileID: 1125363258}
   - component: {fileID: 1125363259}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Fern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2859,6 +2859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  rb: {fileID: 1125363255}
 --- !u!61 &1125363259
 BoxCollider2D:
   m_ObjectHideFlags: 0
