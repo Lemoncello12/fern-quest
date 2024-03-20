@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody2D rb;
     public int currentHealth = 0;
     public int maxHealth = 20;
+    public GameObject GameOver;
     Vector2 moving;
 
     public HealthBar healthBar;
@@ -18,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        GameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,14 +39,14 @@ public class PlayerMove : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            OnDeath();
+            Time.timeScale = 0f;
+            GameOver.SetActive(true);
         }
     }
 
-    void OnDeath()
+    public void Retry()
     {
-        Time.timeScale = 0f;
-
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
