@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody2D rb;
     public int currentHealth = 0;
     public int maxHealth = 20;
+    public int keys = 0;
     public GameObject GameOver;
     Vector2 moving;
 
@@ -48,5 +49,15 @@ public class PlayerMove : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Key"))
+        {
+            //Debug.Log("AAAAAAAAAAAAAAAAA");
+            other.gameObject.SetActive(false);
+            keys += 1;
+        }
     }
 }
