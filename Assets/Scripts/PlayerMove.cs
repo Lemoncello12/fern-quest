@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerMove : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     public int maxHealth = 20;
     public int keys = 0;
     public GameObject GameOver;
+    public TextMeshProUGUI keyText;
     Vector2 moving;
 
     public HealthBar healthBar;
@@ -21,6 +23,8 @@ public class PlayerMove : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         GameOver.SetActive(false);
+        keys = 0;
+        keyText.text = "0";
     }
 
     // Update is called once per frame
@@ -31,6 +35,7 @@ public class PlayerMove : MonoBehaviour
         moving = new Vector2(horizontal * speed, vertical * speed);
         rb.velocity = moving.normalized * speed;
 
+        keyText.text = keys.ToString();
     }
 
     public void TakeDamage(int damage)
