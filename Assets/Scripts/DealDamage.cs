@@ -5,6 +5,7 @@ using UnityEngine;
 public class DealDamage : MonoBehaviour
 {
     public int damage = 4;
+    public float health = 10f;
     // Start is called before the first frame update
     void Start()
     {
