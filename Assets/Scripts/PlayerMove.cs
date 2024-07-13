@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour
     public int keys = 0;
     public GameObject GameOver;
     public TextMeshProUGUI keyText;
+    public GameObject sword;
     public Sprite frontSprite;
     public Sprite backSprite;
     public Sprite leftSprite;
@@ -43,6 +44,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             currentSprite.sprite = frontSprite;
+            sword.transform.eulerAngles.z = 0f;
         }
         else if (Input.GetKey(KeyCode.S))
         {
