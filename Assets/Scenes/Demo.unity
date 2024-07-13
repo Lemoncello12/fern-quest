@@ -4396,6 +4396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+  health: 10
 --- !u!61 &1060752724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4857,6 +4858,10 @@ MonoBehaviour:
   keys: 0
   GameOver: {fileID: 1303178547}
   keyText: {fileID: 827922185}
+  frontSprite: {fileID: 21300000, guid: 0be3aa68d362a3446bfda69010a37b3e, type: 3}
+  backSprite: {fileID: 21300000, guid: 0df59756cb7b78f47b5daa4cb5de1db0, type: 3}
+  leftSprite: {fileID: 21300000, guid: 1f49c0062ec5f604a995777748e1dd7e, type: 3}
+  rightSprite: {fileID: 21300000, guid: cdb038d798c76f44980479f3134500e8, type: 3}
   healthBar: {fileID: 147801230}
 --- !u!61 &1125363259
 BoxCollider2D:

@@ -14,12 +14,18 @@ public class PlayerMove : MonoBehaviour
     public int keys = 0;
     public GameObject GameOver;
     public TextMeshProUGUI keyText;
+    public Sprite frontSprite;
+    public Sprite backSprite;
+    public Sprite leftSprite;
+    public Sprite rightSprite;
+    SpriteRenderer currentSprite;
     Vector2 moving;
 
     public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
+        currentSprite = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         GameOver.SetActive(false);
@@ -34,7 +40,22 @@ public class PlayerMove : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         moving = new Vector2(horizontal * speed, vertical * speed);
         rb.velocity = moving.normalized * speed;
-
+        if (Input.GetKey(KeyCode.W))
+        {
+            currentSprite.sprite = frontSprite;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            currentSprite.sprite = backSprite;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            currentSprite.sprite = leftSprite;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            currentSprite.sprite = rightSprite;
+        }
         keyText.text = keys.ToString();
     }
 
