@@ -4306,6 +4306,7 @@ GameObject:
   - component: {fileID: 994244898}
   - component: {fileID: 994244899}
   - component: {fileID: 994244900}
+  - component: {fileID: 994244901}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -4425,6 +4426,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.1964545}
   m_EdgeRadius: 0
+--- !u!114 &994244901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994244897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f4e0b618325cc42a24d8ec9ca9aa96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 10
 --- !u!1 &1060752720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,6 +4540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+  takesDamage: 1
   health: 10
 --- !u!61 &1060752724
 BoxCollider2D:
@@ -4989,6 +5004,7 @@ MonoBehaviour:
   keys: 0
   GameOver: {fileID: 1303178547}
   keyText: {fileID: 827922185}
+  swordTransform: {fileID: 0}
   frontSprite: {fileID: 21300000, guid: 0be3aa68d362a3446bfda69010a37b3e, type: 3}
   backSprite: {fileID: 21300000, guid: 0df59756cb7b78f47b5daa4cb5de1db0, type: 3}
   leftSprite: {fileID: 21300000, guid: 1f49c0062ec5f604a995777748e1dd7e, type: 3}
