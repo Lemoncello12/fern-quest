@@ -44,19 +44,26 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             currentSprite.sprite = frontSprite;
-            sword.transform.eulerAngles.z = 0f;
+            sword.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            sword.GetComponent<SpriteRenderer>().sortingOrder = 4;
         }
         else if (Input.GetKey(KeyCode.S))
         {
             currentSprite.sprite = backSprite;
+            sword.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+            sword.GetComponent<SpriteRenderer>().sortingOrder = 6;
         }
         else if (Input.GetKey(KeyCode.A))
         {
             currentSprite.sprite = leftSprite;
+            sword.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            sword.GetComponent<SpriteRenderer>().sortingOrder = 4;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             currentSprite.sprite = rightSprite;
+            sword.transform.rotation = Quaternion.Euler(0f, 0f, 270f);
+            sword.GetComponent<SpriteRenderer>().sortingOrder = 4;
         }
         keyText.text = keys.ToString();
     }
