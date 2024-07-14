@@ -4438,7 +4438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f4e0b618325cc42a24d8ec9ca9aa96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 10
+  strength: 2
   damageTime: 0.1
   cooldownTime: 0.75
 --- !u!1 &1060752720
@@ -4455,7 +4455,7 @@ GameObject:
   - component: {fileID: 1060752724}
   - component: {fileID: 1060752723}
   m_Layer: 20
-  m_Name: Square
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4543,7 +4543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 4
   takesDamage: 1
-  health: 10
+  health: 8
 --- !u!61 &1060752724
 BoxCollider2D:
   m_ObjectHideFlags: 0
