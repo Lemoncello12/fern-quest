@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConrollerCamera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     [SerializeField] private float speed;
     private float currentPosX;
@@ -11,7 +11,8 @@ public class ConrollerCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        currentPosX = transform.position.x;
+        currentPosY = transform.position.y;
     }
 
     // Update is called once per frame
